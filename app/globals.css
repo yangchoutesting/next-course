@@ -1,8 +1,22 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 0, 0, 0;
+    }
+}
 
 body {
     color: rgb(var(--foreground-rgb));
-    padding: 1rem;
+}
+
+@layer base {
+    h1 {
+        @apply font-extrabold text-2xl mb-3;
+    }
 }
